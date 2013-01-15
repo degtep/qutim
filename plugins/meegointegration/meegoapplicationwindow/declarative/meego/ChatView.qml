@@ -21,7 +21,7 @@ Item {
         onHeightChanged: flickable.scrollToBottom()
         
         function scrollToBottom() {
-            flickable.contentY = flickable.contentHeight - flickable.height;
+	    flickable.contentY = flickable.contentHeight;
         }
         
         WebView {

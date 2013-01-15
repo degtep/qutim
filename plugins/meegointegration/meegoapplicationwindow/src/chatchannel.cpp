@@ -185,7 +185,7 @@ qint64 ChatChannel::doAppendMessage(qutim_sdk_0_3::Message &message)
 		emit unreadCountChanged(m_unread.count());
 	}
 	
-	if (!message.property("silent", false) && !isActive())
+    if (!message.property("silent", false))
 		Notification::send(message);
 	
 	emit messageAppended(message);
